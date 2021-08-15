@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="decreaseValue()">-</button>
+        <input type="text" readonly v-model="counter">
+        <button @click="increaseValue()">+</button>
+        <hr>
+        <input 
+            type="text" 
+            placeholder="Input your name here" 
+            v-model="name"
+        >
+        <input 
+            type="number"
+            v-model="ratePerHour"
+        >
+        <input 
+            type="number"
+            v-model="hours"
+        >
+        <br>
+        Hello, {{ name }}.<br/>
+        Your salary is {{ calculatedSalary }}
+        <hr>
+        <input 
+            type="text"
+            v-model="message"
+        >
+        <div>{{ messageToUpperCase }}</div>
+
+        <hr>
+        <input 
+            :type="showPassword ? 'text' : 'password' "
+        >
+        <button 
+            @click="showPassword = !showPassword"
+            :style="{backgroundColor: showPassword ? 'red' : 'grey' }"
+        >@</button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="app.js"></script>
+</body>
+</html>
